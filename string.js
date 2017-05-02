@@ -7,11 +7,11 @@ function PasswordMessage(m){
 
 function inRange(char,min,max){
     let unicode = char.charCodeAt(0);
-    let mincode = min.charCodeAt(8);
-    let maxcode = max.charCodeAt(20);
-
-    if(unicode<=maxcode){
+    if(unicode>= min && unicode<=max){
       return true;
+    }
+    else{
+      return false;
     }
 
 }
@@ -37,11 +37,36 @@ exports.checkLength = function(str){
 
 
 exports.containsUpper =function(str){
+  let hasUpper = false;
+  try{
+    for(let x=0;x<str.length;x++){
+      if(x>=65 && x<=90){
+        hasUpper = true;
+      }
+    }
+    catch(e){
+      console.log(e.name+": "+e.message);
+      return hasUpper;
+    }
+  }
+
 
 }
 
 
 exports.containsLower =function(str){
+  let hasLower = false;
+  try{
+    for(let x=0;x<str.length;x++){
+      if(x>=97 && x<=122){
+        hasLower = true;
+      }
+    }
+    catch(e){
+      console.log(e.name+": "+e.message);
+      return hasLower;
+    }
+  }
 
 }
 
