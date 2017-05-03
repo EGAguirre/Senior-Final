@@ -40,7 +40,7 @@ exports.containsUpper =function(str){
   let hasUpper = false;
   try{
     for(let x=0;x<str.length;x++){
-      if(x>=65 && x<=90){
+      if(inRange(str[x],65,90)){
         hasUpper = true;
       }
     }
@@ -58,7 +58,7 @@ exports.containsLower =function(str){
   let hasLower = false;
   try{
     for(let x=0;x<str.length;x++){
-      if(x>=97 && x<=122){
+      if(inRange(str[x],97,122)){
         hasLower = true;
       }
     }
@@ -72,10 +72,36 @@ exports.containsLower =function(str){
 
 
 exports.containsNumerical =function(str){
+  let hasNumerical = false;
+  try{
+    for(let x=0;x<str.length;x++){
+      if(inRange(str[x],48,57)){
+        hasNumerical = true;
+      }
+    }
+    catch(e){
+      console.log(e.name+": "+e.message);
+      return hasNumerical;
+    }
+  }
 
 }
 
 
 exports.containsSpecial =function(str){
+  let hasSpecial = false;
+  let special = [33,64,35,36,37,94,38,42];
+  try{
+    for(let x=0;x<special.length;x++){}
+      for(let y=0;y<str.length;y++){
+        if(inRange(str[y],special.length,)){
+
+        }
+      }
+    )
+  }
+
+  }
+
 
 }
