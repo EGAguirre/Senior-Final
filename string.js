@@ -44,13 +44,11 @@ exports.containsUpper =function(str){
         hasUpper = true;
       }
     }
-    catch(e){
-      console.log(e.name+": "+e.message);
-      return hasUpper;
-    }
   }
-
-
+  catch(e){
+    console.log(e.name+": "+e.message);
+    return hasUpper;
+  }
 }
 
 
@@ -62,13 +60,12 @@ exports.containsLower =function(str){
         hasLower = true;
       }
     }
+  }
     catch(e){
       console.log(e.name+": "+e.message);
       return hasLower;
     }
   }
-
-}
 
 
 exports.containsNumerical =function(str){
@@ -79,13 +76,12 @@ exports.containsNumerical =function(str){
         hasNumerical = true;
       }
     }
+  }
     catch(e){
       console.log(e.name+": "+e.message);
       return hasNumerical;
     }
   }
-
-}
 
 
 exports.containsSpecial =function(str){
@@ -94,7 +90,7 @@ exports.containsSpecial =function(str){
   try{
     for(let x=0;x<special.length;x++){}
       for(let y=0;y<str.length;y++){
-        if(inRange(str[y],special.length,)){
+        if(inRange(str[y] == special[x],)){
 
         }
       }
